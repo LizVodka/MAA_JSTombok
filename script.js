@@ -124,7 +124,7 @@ function reszfeladat6() {
     var i = 0;
     do {
         i++;
-    }while(i <=tomb.length && !(tomb[i]%2 == 0 && tomb[i]%3 == 0));
+    }while(i < tomb.length && !(tomb[i]%2 == 0 && tomb[i]%3 == 0));
     if(i <= tomb.length) {
         kettoEsHarom.innerHTML += "<br>b) Van 2-vel és 3-mal osztható szám.";
     }
