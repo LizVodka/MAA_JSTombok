@@ -48,7 +48,7 @@ function reszfeladat2() {
     var parostomb = [];
     var parosDb = 0;
     for (var i = 0; i < tomb.length; i++) {
-        if(tomb[i] % 2 == 0) {
+        if (tomb[i] % 2 === 0) {
             parostomb[parosDb] = tomb[i];
             parosDb++;
         }
@@ -57,8 +57,23 @@ function reszfeladat2() {
     parosElemek.innerHTML = "A tömbben lévő páros számok: " + parostomb.join("; ");
 }
 
+function reszfeladat3() {
+    /*Írjuk ki a tömbelemeket fordított sorrendben új bekezdésben!*/
+    /*MAA*/
+    var fordTomb = [];
+    index = 0;
+    
+    for(var i = tomb.length-1; i >= 0; i--) {
+        fordTomb[index] = tomb[i];
+        index++;
+    }
+    var forditott = id("forditott");
+    forditott.innerHTML = "A tömb elemei visszafele: " + fordTomb.join("; ");
+}
+
 function dolgozz() {
     feltolt();
     osszegez();
     reszfeladat2();
+    reszfeladat3();
 };
