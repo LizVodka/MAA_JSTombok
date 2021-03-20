@@ -57,7 +57,7 @@ function reszfeladat2() {
         }
     }
     var parosElemek = id("prselemek");
-    parosElemek.innerHTML = "A tömbben lévő páros számok: " + parostomb.join("; ");
+    parosElemek.innerHTML = "<h2>Írjuk ki a páros számokat egy új bekezdésbe!</h2>A tömbben lévő páros számok: " + parostomb.join("; ");
 }
 
 function reszfeladat3() {
@@ -71,7 +71,7 @@ function reszfeladat3() {
         index++;
     }
     var forditott = id("forditott");
-    forditott.innerHTML = "A tömb elemei visszafele: " + fordTomb.join("; ");
+    forditott.innerHTML = "<h2>Írjuk ki a tömbelemeket fordított sorrendben új bekezdésben!</h2>A tömb elemei visszafele: " + fordTomb.join("; ");
 }
 
 function reszfeladat4() {
@@ -83,7 +83,7 @@ function reszfeladat4() {
         ottelOszthato++;
     }
     var ottel = id("ottel");
-    ottel.innerHTML = "Öttel osztható számok: " + ottelOszthato + " db."
+    ottel.innerHTML = "<h2>Hány 5-tel osztható szám van a számok között?</h2>Öttel osztható számok: " + ottelOszthato + " db."
 }
 
 function reszfeladat5() {
@@ -96,7 +96,7 @@ function reszfeladat5() {
         }
     }
     var maxi = id("max");
-    maxi.innerHTML = "A tömb legnagyobb eleme: " + MAX;
+    maxi.innerHTML = "<h2>Mekkora a legnagyobb szám?</h2>A tömb legnagyobb eleme: " + MAX;
 };
 
 
@@ -112,11 +112,12 @@ function reszfeladat6() {
         }
     }
     var kettoEsHarom = id("kettoharom");
-    if(tomb.length == 0) {
-        kettoEsHarom.innerHTML = "Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
+    kettoEsHarom.innerHTML = "<h2>Van-e olyan szám, ami 2-vel is és 3-mal is osztható?</h2>"
+    if(tombKetHar.length == 0) {
+        kettoEsHarom.innerHTML += "a) Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
     }
     else {
-        kettoEsHarom.innerHTML = ketHarDb + " db 2-vel és 3-mal osztható szám van, ezek: " + tombKetHar.join("; ");
+        kettoEsHarom.innerHTML += "a)" + ketHarDb + " db 2-vel és 3-mal osztható szám van, ezek: " + tombKetHar.join("; ");
     }
 
     /*b) megoldás*/
@@ -129,10 +130,10 @@ function reszfeladat6() {
         i++;
     }while(!(tomb[i]%2 == 0 && tomb[i]%3 == 0));
     if(i <= tomb.length) {
-        kettoEsHarom.innerHTML += "<br>Van 2-vel és 3-mal osztható szám.";
+        kettoEsHarom.innerHTML += "<br>b) Van 2-vel és 3-mal osztható szám.";
     }
     else {
-        kettoEsHarom.innerHTML += "<br>Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
+        kettoEsHarom.innerHTML += "<br>b) Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
     }
 }
 
