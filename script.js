@@ -18,6 +18,8 @@ function feltolt() {
     kiir.innerHTML = "Jó reggelt! ";
     var adat = id("adat");
     var ertek = Number(adat.value);
+
+    /*MAA*/
     var a = id("also");
     var also = Number(a.value);
     var f = id("felso");
@@ -45,6 +47,7 @@ function osszegez() {
 
 function reszfeladat2() {
     /*Írjuk ki a páros számokat egy új bekezdésbe!*/
+    /*MAA*/
     var parostomb = [];
     var parosDb = 0;
     for (var i = 0; i < tomb.length; i++) {
@@ -62,8 +65,8 @@ function reszfeladat3() {
     /*MAA*/
     var fordTomb = [];
     index = 0;
-    
-    for(var i = tomb.length-1; i >= 0; i--) {
+
+    for (var i = tomb.length - 1; i >= 0; i--) {
         fordTomb[index] = tomb[i];
         index++;
     }
@@ -71,9 +74,36 @@ function reszfeladat3() {
     forditott.innerHTML = "A tömb elemei visszafele: " + fordTomb.join("; ");
 }
 
+function reszfeladat4() {
+    /*Hány 5-tel osztható szám van a számok között?*/
+    /*MAA*/
+    var ottelOszthato = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if(tomb[i] % 5 === 0)
+        ottelOszthato++;
+    }
+    var ottel = id("ottel");
+    ottel.innerHTML = "Öttel osztható számok: " + ottelOszthato + " db."
+}
+
+function reszfeladat5() {
+    /*Mekkora a legnagyobb szám?*/
+    /*MAA*/
+    var MAX = tomb[0];
+    for (var i = 1; i < tomb.length; i++) {
+        if(tomb[i] > MAX) {
+            MAX = tomb[i];
+        }
+    }
+    var maxi = id("max");
+    maxi.innerHTML = "A tömb legnagyobb eleme: " + MAX;
+}
+
 function dolgozz() {
     feltolt();
     osszegez();
     reszfeladat2();
     reszfeladat3();
+    reszfeladat4();
+    reszfeladat5();
 };
