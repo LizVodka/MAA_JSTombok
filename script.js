@@ -117,7 +117,7 @@ function reszfeladat6() {
         kettoEsHarom.innerHTML += "a) Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
     }
     else {
-        kettoEsHarom.innerHTML += "a)" + ketHarDb + " db 2-vel és 3-mal osztható szám van, ezek: " + tombKetHar.join("; ");
+        kettoEsHarom.innerHTML += "a) " + ketHarDb + " db 2-vel és 3-mal osztható szám van, ezek: " + tombKetHar.join("; ");
     }
 
     /*b) megoldás*/
