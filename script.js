@@ -121,10 +121,14 @@ function reszfeladat6() {
 
     /*b) megoldás*/
     var i = 0;
-    while(i%2 != 0 || i%3 != 0) {
+    do {
+        /*Ez itt egy csúnya megoldás, de ha nem teszem be, és nem talál oszthatót, akkor a világ végéig fut.*/
+        if(i > tomb.length) {
+            break;
+        }
         i++;
-    }
-    if(i < tomb.length) {
+    }while(!(tomb[i]%2 == 0 && tomb[i]%3 == 0));
+    if(i <= tomb.length) {
         kettoEsHarom.innerHTML += "<br>Van 2-vel és 3-mal osztható szám.";
     }
     else {
