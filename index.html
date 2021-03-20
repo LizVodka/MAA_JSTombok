@@ -13,16 +13,35 @@
                 <h1>Tömbök kezelése</h1>
             </header>   
             <form>
-                <label for="adat">Adat:</label><br>
-                <input type="text" id="adat" name="adat"><br>
+                <p>
+                    <label for="adat">Generálandó tömb mérete: </label>
+                    <input type="number" id="adat" name="adat"><br>
+                </p>
+                <p>
+                    A tömbbe kerülő random számok<br>
+                    <label for="also">alsó határa:</label>
+                    <input type="number" id="also" name="also">
+                    <label for="felso">felső határa:</label>
+                    <input type="number" id="felso" name="felso"><br>
+                </p>
+                
                 <input type="button" id="gomb" name="adat" value="Dolgozz!"><br>
             </form>
             
             <article>
                 <p id="kiir"></p>
+
                 <p id="osszeg"></p>
                 <p id="oszthato"></p>
                 
+
+                <div id="osszeg"></div>
+                <div id="prselemek"></div>
+                <div id="forditott"></div>
+                <div id="ottel"></div>
+                <div id="max"></div>
+                <div id="kettoharom"></div>
+
             </article>
             
         </main>
