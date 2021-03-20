@@ -97,7 +97,41 @@ function reszfeladat5() {
     }
     var maxi = id("max");
     maxi.innerHTML = "A tömb legnagyobb eleme: " + MAX;
+};
+
+
+function reszfeladat6() {
+    /*Van-e olyan szám, ami 2-vel is és 3-mal is osztható?*/
+    /*a) megoldás*/
+    var tombKetHar = [];
+    var ketHarDb = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if(tomb[i] % 2 === 0 && tomb[i] % 3 === 0) {
+            tombKetHar[ketHarDb] = tomb[i];
+            ketHarDb++;
+        }
+    }
+    var kettoEsHarom = id("kettoharom");
+    if(tomb.length == 0) {
+        kettoEsHarom.innerHTML = "Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
+    }
+    else {
+        kettoEsHarom.innerHTML = ketHarDb + " db 2-vel és 3-mal osztható szám van, ezek: " + tombKetHar.join("; ");
+    }
+
+    /*b) megoldás*/
+    var i = 0;
+    while(i%2 != 0 || i%3 != 0) {
+        i++;
+    }
+    if(i < tomb.length) {
+        kettoEsHarom.innerHTML += "<br>Van 2-vel és 3-mal osztható szám.";
+    }
+    else {
+        kettoEsHarom.innerHTML += "<br>Nincs olyan szám, ami 2-vel és 3-mal is osztható lenne.";
+    }
 }
+
 
 function dolgozz() {
     feltolt();
@@ -106,4 +140,6 @@ function dolgozz() {
     reszfeladat3();
     reszfeladat4();
     reszfeladat5();
+    reszfeladat6();
+
 };
